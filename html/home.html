@@ -15,39 +15,44 @@
 
 <body>
 
-    <main id="container">
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../imgs/logo.PNG" alt="logo">
+            </a>
+        </div>
 
-        <aside id="top-menu">
-            <img id="logo" src="../imgs/logo.PNG">
-            <div id="top-menu-organization">
-                    <a href="juridico.html" target="_blank" id="juridico"><span>Jurídico</span></a>
-                    <a href="login.html" target="_blank"><span>Login</span></a>
-            </div>
+        <button class="menu-toggle">
+            <i class="fa fa-lg fa-bars"></i>
+        </button>
+
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="juridico.html" target="_blank">Jurídico</a>
+                </li>
+            </ul>
+        </nav>
+
+        <aside class="autenticacao">
+            <a href="login.html" target="_blank" class="botao destaque">Login</a>
         </aside>
+    </header>
 
-        <section id="sobre-container">
+    <h1>Seja bem-vindo ao bunquer</h1>
 
-            <div id="sobre">
+    <p id="motivo">Este é o bunquer, plataforma de comunicação desenvolvida pela patuleia. Servirá como
+        backup caso o
+        careca, judex e comercenária sejam presos.</p>
+    <p id="solicitacao">A plataforma está sendo desenvolvida a pedido do presidente do <span class="highlight"> GLAM
+            CLUBE,
+            GLAM</span>.</p>
 
-                <h1>Seja bem-vindo ao bunquer</h1>
-
-                <p id="motivo">Este é o bunquer, plataforma de comunicação desenvolvida pela patuleia. Servirá como
-                    backup caso o
-                    careca, judex e comercenária sejam presos.</p>
-                <p id="solicitacao">A plataforma está sendo desenvolvida a pedido do presidente do <span
-                        class="highlight"> GLAM CLUBE,
-                        GLAM</span>.</p>
-
-            </div>
-
-        </section>
-
-        <footer>
-            <p id="footer-text">GLAM CLUBE © 2023</p>
-            <address>Barra do Choça, BA, Masmorra do GLAM Nº 500</address>
-        </footer>
-
-    </main>
+    <footer>
+        <p id="footer-text">GLAM CLUBE © 2023</p>
+        <address>Barra do Choça, BA, Masmorra do GLAM Nº 500</address>
+    </footer>
 
 </body>
+
 </html>

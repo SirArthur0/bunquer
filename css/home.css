@@ -1,9 +1,10 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'roboto', sans-serif;
     box-sizing: border-box;
-    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--sobre-color);
 }
 
@@ -16,42 +17,90 @@
     --highlight-color: #a771ee;
 }
 
-.highlight {
-    color: var(--highlight-color);
-    font-weight: bold;
+.cabecalho {
+    background: var(--top-menu-color);
+    border-bottom: solid 2px var(--main-color);
+    height: 110px;
+    box-sizing: content-box;
 }
 
-#container {
-    display: flex;
-    flex-direction: column;
-}
-
-#top-menu {
-    background-color: var(--top-menu-color);
-    padding: 15px 12px;
-}
-
-#sobre-container {
-    flex: 1 1 20%;
-    min-height: 100%;
-    background-color: var(--sobre-color);
-    text-align: center;
-    border-top: 5px solid var(--border-color);
-    padding: 50px;
-}
-
-
-#logo-geral {
+.logo{
+    display: inline-block;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
 }
 
-#logo {
-    border-radius: 5%;
-    background-color: var(--top-menu-color);
-    padding: 15px 12px;
+.logo img{
+    padding: 15px 0px;
+    padding-left: 20px;
+    width: 250px;
+    height: 125px; 
 }
+
+.menu-toggle {
+    float: right;
+    color: var(--sobre-color);
+    background-color: var(--sobre-color);
+    border: solid 1px var(--main-color);
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 20px;
+    margin: 20px 15px;
+}
+
+.menu {
+    display: inline-block;
+    vertical-align: top;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 20px;
+    padding-top: 20px;
+    color: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+}
+
+.menu a{
+    padding: 15px;
+}
+
+.autenticacao {
+    float: right;
+    height: 80px;
+    padding: 25px;
+}
+
+.menu a:hover,
+.menu a.selected {
+    background-color: #4faddb;
+}
+
+.botao {
+    border-radius: #4faddb;
+}
+
+.destaque {
+    background: #f50a31;
+    color: #fff;
+}
+
 
 h1 {
     padding-top: 20px;
@@ -96,32 +145,7 @@ footer {
     margin-bottom: 0px;
 }
 
-
-#juridico {
-    display: block;
+.highlight {
     color: var(--highlight-color);
-    border: 2px solid var(--highlight-color);
-    border-radius: 5px;
-    /*padding: 10px 25px;*/
     font-weight: bold;
-    font-size: 20px;
-    transition: .5s;
-    padding: 0.5rem 1rem;
 }
-
-
-#juridico span {
-    background-color: transparent;
-}
-
-#juridico:hover {
-    background-color: transparent;
-}
-
-#top-menu-organization, juridico {
-    padding-left: 400px;
-    padding-bottom: 30px;
-}
-
-
-
