@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+    min-height: 100%;
+    background-color: var(--sobre-color);
+}
+
+:root {
+    --top-menu-color: #100222;
+    --border-color: #222021;
+    --sobre-color: #190336;
+    --main-color: #5043D4;
+    --main-text-color: #FFF;
+    --highlight-color: #a771ee;
+}
+
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+}
+
+#top-menu {
+    background-color: var(--top-menu-color);
+    padding: 15px 12px;
+}
+
+#sobre-container {
+    flex: 1 1 20%;
+    min-height: 100%;
+    background-color: var(--sobre-color);
+    text-align: center;
+    border-top: 5px solid var(--border-color);
+    padding: 50px;
+}
+
+
+#logo-geral {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#logo {
+    border-radius: 5%;
+    background-color: var(--top-menu-color);
+    padding: 15px 12px;
+}
+
+h1 {
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+#sobre {
+    padding-top: 20px;
+    flex-direction: column;
+    min-height: 1 1 80%;
+    box-sizing: content-box;
+    background-color: var(--sobre-color);
+}
+
+#motivo {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-text-color)
+}
+
+#solicitacao {
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-text-color)
+}
+
+footer {
+    padding-top: 23%;
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--main-text-color);
+    
+}
+
+#footer-text {
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+
+#juridico {
+    display: block;
+    color: var(--highlight-color);
+    border: 2px solid var(--highlight-color);
+    border-radius: 5px;
+    /*padding: 10px 25px;*/
+    font-weight: bold;
+    font-size: 20px;
+    transition: .5s;
+    padding: 0.5rem 1rem;
+}
+
+
+#juridico span {
+    background-color: transparent;
+}
+
+#juridico:hover {
+    background-color: transparent;
+}
+
+#top-menu-organization, juridico {
+    padding-left: 400px;
+    padding-bottom: 30px;
+}
+
+
+
