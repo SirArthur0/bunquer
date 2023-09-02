@@ -4,12 +4,13 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 
+
 const { db } = require('./.env')
 
 module.exports = {
 
     client: 'postgresql',
-    connection: 'db',
+    connection: db,
     
     pool: {
       min: 2,
@@ -18,4 +19,5 @@ module.exports = {
     migrations: {
       tableName: 'knex_migrations'
     }
+
 };
