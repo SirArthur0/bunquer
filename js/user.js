@@ -4,10 +4,16 @@ module.exports = app => {
 
     const { existsOrError, notExistsOrError, equalsOrError } = app.js.validations
 
+    const encryptPassword = password => {
+        const salt = bcrypt.genSaltSync(10)
+        return bcrypt.hashSync(password, salt)
+    }
 
     const save = async(req, res) => {
         const user = { ...req.body }
         if(req.params.id) user.id = req.param.id
+
+        if(!req.user || !req.user.admin) user.admin = false
 
         try {
             existsOrError(user.nome, "Nome não informado.")
@@ -25,6 +31,54 @@ module.exports = app => {
         } catch (msg) {
             return res.status(400).send(msg)
         }
+
+        user.password = encryptPassword(user.password)
+        delete user.confirmPassword
+
+        if(!user.id) {
+            app.db('user')
+                .inser(user)
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send(err))
+        }
     }
+
+
+    const update = async (req, res) => {
+        const user = {...req.body}
+        if(req.params.id) user.id = req.params.id
+
+        if(user.id && user.nome && user.sobrenome) {
+            app.db('user')
+                .update(({ nome: user.name, sobrenome: user.sobrenome}))
+                .where({ id: user.id })
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send(err))
+        } else if(user.id && user.nome){
+            app.db('user')
+                .update({ name: user.name })
+                .where({ id: user.id })
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send(err))
+        } else if(user.id && user.sobrenome) {
+            app.db('user')
+                .update({ sobrenome: user.sobrenome})
+                .where({ id: user.id})
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send(err))
+        } else {
+            return res.status(400).send()
+        }
+    }  
+
+
+    const getAll = (req, res) => {
+        app.db('user')
+            .select('username', 'nome', 'sobrenome')
+            .then(user => res.json(user))
+            .catch(err => res.status(500).send(err))
+    }
+
+    return { save, update, getAll }
 
 }
