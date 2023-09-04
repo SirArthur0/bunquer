@@ -1,7 +1,7 @@
 const admin = require('./admin')
 
 module.exports = app => {
-    app.post('/signup', app.js.save)
+    app.post('/signup', app.js.user.save)
     app.post('/signin', app.js.auth.signin)
     app.post('/validateToken', app.js.auth.validateToken)
 

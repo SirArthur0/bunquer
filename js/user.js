@@ -19,11 +19,10 @@ module.exports = app => {
             existsOrError(user.nome, "Nome não informado.")
             existsOrError(user.sobrenome, "Sobrenome não informado.")
             existsOrError(user.username, "Username não informado.")
-            equalsOrError(user.username, "Username já está sendo utilizado.")
             existsOrError(user.password, "Senha não informada.")
             equalsOrError(user.password, user.confirmPassword, "Senhas não conferem.")
 
-            const userFromDB = await app.db('user')
+            const userFromDB = await app.db('users')
                 .where({ username: user.username}).first()
             if(!user.id) {
                 notExistsOrError(userFromDB, "Usuário já cadastrado.")
@@ -36,8 +35,8 @@ module.exports = app => {
         delete user.confirmPassword
 
         if(!user.id) {
-            app.db('user')
-                .inser(user)
+            app.db('users')
+                .insert(user)
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
         }
@@ -49,19 +48,19 @@ module.exports = app => {
         if(req.params.id) user.id = req.params.id
 
         if(user.id && user.nome && user.sobrenome) {
-            app.db('user')
+            app.db('users')
                 .update(({ nome: user.name, sobrenome: user.sobrenome}))
                 .where({ id: user.id })
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
         } else if(user.id && user.nome){
-            app.db('user')
+            app.db('users')
                 .update({ name: user.name })
                 .where({ id: user.id })
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
         } else if(user.id && user.sobrenome) {
-            app.db('user')
+            app.db('users')
                 .update({ sobrenome: user.sobrenome})
                 .where({ id: user.id})
                 .then(_ => res.status(204).send())
@@ -73,7 +72,7 @@ module.exports = app => {
 
 
     const getAll = (req, res) => {
-        app.db('user')
+        app.db('users')
             .select('username', 'nome', 'sobrenome')
             .then(user => res.json(user))
             .catch(err => res.status(500).send(err))

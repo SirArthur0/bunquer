@@ -1,5 +1,5 @@
 const { authSecret } = require('../.env')
-const jwt = requie('jwt-simple')
+const jwt = require('jwt-simple')
 const bcrypt = require('bcrypt-nodejs')
 
 module.exports = app => {
@@ -9,7 +9,7 @@ module.exports = app => {
             return res.status(400).send('Usuário ou senha não informado.')
         }
 
-        const user = await app.db('user')
+        const user = await app.db('users')
             .where({ username: req.body.username })
             .first()
         if(!user) return res.status(400).send('Username não encontrado.')
