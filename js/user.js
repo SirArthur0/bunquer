@@ -65,11 +65,18 @@ module.exports = app => {
                 .where({ id: user.id})
                 .then(_ => res.status(204).send())
                 .catch(err => res.status(500).send(err))
-        } else {
+        } else if(user.id && user.admin) {
+            app.db('users')
+                .update({ admin: user.admin })
+                .where({ id: user.id })
+                .then(_ => res.status(204).send())
+                .catch(err => res.status(500).send())
+        } 
+        
+        else {
             return res.status(400).send()
         }
     }  
-
 
     const getAll = (req, res) => {
         app.db('users')

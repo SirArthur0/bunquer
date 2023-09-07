@@ -7,6 +7,6 @@ module.exports = app => {
 
     app.route('/user')
         //.all(app.config.passport.authenticate())
-        .post(app.js.user.save)
+        .post(app.js.user.update)
         .get(app.js.user.getAll)
 }
