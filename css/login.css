@@ -82,16 +82,15 @@ body {
     border: 2px solid var(--main-color);
     border-radius: 5px;
     background-color: var(--top-menu-color);
-    padding: 25px 30px;
-    margin-left: 800px;
-    margin-top: 225px;
+    padding: 50px 60px;
+    margin-left: 780px;
+    margin-top: 155px;
 }
 
 .login p {
     color: #eee;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
-
 }
 
 .username {
@@ -122,12 +121,28 @@ body {
     font-size: 15px;
 }
 
-.signin {
+.signin a {
+    text-decoration: none;
     padding-top: 15px;
     text-align: center;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    background-color: var(--top-menu-color);
+    padding: 10px 15px;
+    margin-left: 65px;
+    transition: .5s;
+    color: #eee;
+    font-weight: bold;
+    font-size: 20px;
 }
 
+.signin {
+    margin-top: 30px;
+}
 
+.signin :hover {
+    background-color: var(--highlight-color);
+}
 
 #highlight {
     color: var(--highlight-color);
