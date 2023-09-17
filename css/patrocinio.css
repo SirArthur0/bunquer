@@ -24,17 +24,22 @@ body {
     box-sizing: content-box;
 }
 
-.logo{
+.cabecalho a {
+    text-decoration: none;
+    color: #eee
+}
+
+.logo {
     display: inline-block;
     padding: 0;
     margin: 0;
 }
 
-.logo img{
+.logo img {
     padding-left: 12px;
     padding-top: 10px;
     width: 210px;
-    height: 100px; 
+    height: 100px;
 }
 
 .menu {
@@ -67,11 +72,6 @@ body {
     padding: 15px;
 }
 
-.cabecalho a {
-    text-decoration: none;
-    color: #eee;
-}
-
 .menu li:hover {
     background-color: var(--highlight-color);
 }
@@ -95,45 +95,18 @@ body {
     padding-top: 6px;
 }
 
-.autenticacao a:hover{
+.autenticacao a:hover {
     background-color: var(--highlight-color);
 }
 
-h1 {
-    padding-top: 20px;
-    font-size: 50px;
-    text-align: center;
-    color: var(--highlight-color);
-}
 
-#sobre {
-    padding-top: 20px;
-    flex-direction: column;
-    min-height: 1 1 80%;
-    box-sizing: content-box;
-    background-color: var(--sobre-color);
-}
-
-#motivo {
-    padding-top: 40px;
-    font-size: 20px;
-    text-align: center;
-    color: var(--main-text-color)
-}
-
-#solicitacao {
-    padding-top: 10px;
-    font-size: 20px;
-    text-align: center;
-    color: var(--main-text-color)
-}
 
 footer {
     padding-top: 23%;
     text-align: center;
     font-style: italic;
     font-size: 15px;
-    color: var(--main-text-color);
+    color: var(--main-text-color)
 }
 
 #footer-text {
@@ -141,7 +114,80 @@ footer {
     margin-bottom: 0px;
 }
 
-.highlight {
-    color: var(--highlight-color);
+
+/* -- Slide -- */
+
+.container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+    width: 200px;
+    height: 200px; 
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
     font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rbga(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+.column img {
+    width: 200px;
+    height: 200px; 
 }
