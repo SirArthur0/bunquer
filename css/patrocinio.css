@@ -117,14 +117,23 @@ footer {
 
 /* -- Slide -- */
 
+
+img {
+    vertical-align: middle;
+}
+
 .container {
     position: relative;
 }
 
 .mySlides {
     display: none;
-    width: 200px;
-    height: 200px; 
+}
+
+.mySlides, 
+img {
+    height: 300px;
+    width: 350px;
 }
 
 .cursor {
@@ -154,7 +163,7 @@ footer {
 
 .prev:hover,
 .next:hover {
-    background-color: rbga(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .numbertext {
@@ -178,6 +187,16 @@ footer {
     clear: both;
 }
 
+.column {
+    float: left;
+}
+
+.column img {
+    width: 150px;
+    height: 100px; 
+    margin-left: 140px;
+}
+
 .demo {
     opacity: 0.6;
 }
@@ -187,7 +206,4 @@ footer {
     opacity: 1;
 }
 
-.column img {
-    width: 200px;
-    height: 200px; 
-}
+
