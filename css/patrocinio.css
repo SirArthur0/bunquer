@@ -102,7 +102,8 @@ body {
 
 
 footer {
-    padding-top: 23%;
+    margin: auto;
+    padding-top: 9%;
     text-align: center;
     font-style: italic;
     font-size: 15px;
@@ -117,11 +118,6 @@ footer {
 
 /* -- Slide -- */
 
-
-img {
-    vertical-align: middle;
-}
-
 .container {
     position: relative;
 }
@@ -132,8 +128,10 @@ img {
 
 .mySlides, 
 img {
-    height: 300px;
-    width: 350px;
+    height: 400px;
+    width: 450px;
+    margin: auto;
+    padding-top: 15px;
 }
 
 .cursor {
@@ -154,6 +152,7 @@ img {
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
+    padding-top: 10px;
 }
 
 .next {
@@ -166,19 +165,13 @@ img {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
 .caption-container {
     text-align: center;
-    background-color: #222;
+    background-color: var(--top-menu-color);
+    border: .5px solid var(--main-color);
     padding: 2px 16px;
     color: white;
+    margin-top: 30px;
 }
 
 .row:after {
@@ -194,7 +187,7 @@ img {
 .column img {
     width: 150px;
     height: 100px; 
-    margin-left: 140px;
+    margin-left: 200px;
 }
 
 .demo {
@@ -206,4 +199,8 @@ img {
     opacity: 1;
 }
 
-
+h2 {
+    text-align: center;
+    color: #eee;
+    font-size: 30px;
+}
