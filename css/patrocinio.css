@@ -99,11 +99,9 @@ body {
     background-color: var(--highlight-color);
 }
 
-
-
 footer {
     margin: auto;
-    padding-top: 9%;
+    padding-top: 0.3%;
     text-align: center;
     font-style: italic;
     font-size: 15px;
@@ -128,10 +126,10 @@ footer {
 
 .mySlides, 
 img {
-    height: 400px;
+    height: 420px;
     width: 450px;
     margin: auto;
-    padding-top: 15px;
+    border-radius: 20px;
 }
 
 .cursor {
@@ -142,14 +140,13 @@ img {
 .next {
     cursor: pointer;
     position: absolute;
-    top: 40%;
-    width: auto;
-    padding: 16px;
+    top: 35%;
+    padding: 20px;
     margin-top: -50px;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-    border-radius: 0 3px 3px 0;
+    font-size: 30px;
+    border-radius: 0 10px 10px 0;
     user-select: none;
     -webkit-user-select: none;
     padding-top: 10px;
@@ -157,21 +154,23 @@ img {
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 10px 0 0 10px;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--highlight-color);
 }
 
 .caption-container {
     text-align: center;
     background-color: var(--top-menu-color);
     border: .5px solid var(--main-color);
+    border-radius: 10px;
     padding: 2px 16px;
     color: white;
-    margin-top: 30px;
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .row:after {
@@ -186,8 +185,10 @@ img {
 
 .column img {
     width: 150px;
-    height: 100px; 
+    height: 150px; 
     margin-left: 200px;
+    padding-top: 5px;
+    border-radius: 20px;
 }
 
 .demo {
