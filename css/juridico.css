@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -19,7 +18,7 @@ body {
 }
 
 .cabecalho {
-    background: var(--top-menu-color);
+    background-color: var(--top-menu-color);
     border-bottom: solid 2px var(--main-color);
     height: 105px;
     box-sizing: content-box;
@@ -27,7 +26,7 @@ body {
 
 .cabecalho a {
     text-decoration: none;
-    color: #eee;
+    color: #eee
 }
 
 .logo {
@@ -40,7 +39,7 @@ body {
     padding-left: 12px;
     padding-top: 10px;
     width: 210px;
-    height: 100px; 
+    height: 100px;
 }
 
 .menu {
@@ -52,8 +51,8 @@ body {
 }
 
 .menu ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu li {
@@ -77,77 +76,9 @@ body {
     background-color: var(--highlight-color);
 }
 
-.login {
-    display: inline-block;
-    border: 2px solid var(--main-color);
-    border-radius: 5px;
-    background-color: var(--top-menu-color);
-    padding: 50px 60px;
-    margin-left: 780px;
-    margin-top: 155px;
-}
-
-.login p {
-    color: #eee;
-    font-size: 27px;
-    font-weight: bold;
-}
-
-.username {
-    padding-top: 10px;
-    color: #eee;
-    text-align: center;
-}
-
-#usuario {
-    border-radius: 10px;
-    border: 2px solid var(--highlight-color);
-    width: 100%;
-    height: 35px;
-    font-size: 15px;
-}
-
-.password {
-    padding-top: 10px;
-    color: #eee;
-    text-align: center;
-}
-
-#senha {
-    border-radius: 10px;
-    border: 2px solid var(--highlight-color);
-    width: 100%;
-    height: 35px;
-    font-size: 15px;
-}
-
-.signin a {
-    text-decoration: none;
-    padding-top: 15px;
-    text-align: center;
-    border: 2px solid var(--main-color);
-    border-radius: 5px;
-    background-color: var(--top-menu-color);
-    padding: 10px 15px;
-    margin-left: 65px;
-    transition: .5s;
-    color: #eee;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.signin {
-    margin-top: 30px;
-}
-
-.signin :hover {
+.juridico { 
     background-color: var(--highlight-color);
-}
-
-#highlight {
-    color: var(--highlight-color);
-    font-weight: bold;
-}
+}  
 
 .autenticacao {
     float: right;
@@ -168,16 +99,27 @@ body {
     padding-top: 6px;
 }
 
-.autenticacao a{
+.autenticacao a:hover {
     background-color: var(--highlight-color);
 }
 
+
+.principal, 
+#imgprincipal {
+    padding-top: 5px;
+    width: 500px;
+    height: 750px;
+    border-radius: 70px;
+    margin: auto;
+}
+
 footer {
-    padding-top: 245px;
+    margin: auto;
+    padding-top: 0%;
     text-align: center;
     font-style: italic;
     font-size: 15px;
-    color: var(--main-text-color);
+    color: var(--main-text-color)
 }
 
 #footer-text {

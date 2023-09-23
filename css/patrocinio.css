@@ -76,6 +76,10 @@ body {
     background-color: var(--highlight-color);
 }
 
+.patrocinio { 
+    background-color: var(--highlight-color);
+}  
+
 .autenticacao {
     float: right;
     padding: 30px;
