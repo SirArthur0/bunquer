@@ -9,4 +9,4 @@ function sendMessage() {
     document.getElementById("message-area").innerHTML += html
 
     document.getElementById("typing-box").value = ""
-}   
+}
