@@ -24,22 +24,17 @@ body {
     box-sizing: content-box;
 }
 
-.cabecalho a {
-    text-decoration: none;
-    color: #eee
-}
-
-.logo {
+.logo{
     display: inline-block;
     padding: 0;
     margin: 0;
 }
 
-.logo img {
+.logo img{
     padding-left: 12px;
     padding-top: 10px;
     width: 210px;
-    height: 100px;
+    height: 100px; 
 }
 
 .menu {
@@ -72,13 +67,14 @@ body {
     padding: 15px;
 }
 
+.cabecalho a {
+    text-decoration: none;
+    color: #eee;
+}
+
 .menu li:hover {
     background-color: var(--highlight-color);
 }
-
-.patrocinio { 
-    background-color: var(--highlight-color);
-}  
 
 .autenticacao {
     float: right;
@@ -99,17 +95,49 @@ body {
     padding-top: 6px;
 }
 
-.autenticacao a:hover {
+.autenticacao a:hover{
     background-color: var(--highlight-color);
 }
 
+.home { 
+    background-color: var(--highlight-color);
+}  
+
+h1 {
+    padding-top: 20px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--highlight-color);
+}
+
+#sobre {
+    padding-top: 20px;
+    flex-direction: column;
+    min-height: 1 1 80%;
+    box-sizing: content-box;
+    background-color: var(--sobre-color);
+}
+
+#motivo {
+    padding-top: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-text-color)
+}
+
+#solicitacao {
+    padding-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-text-color)
+}
+
 footer {
-    margin: auto;
-    padding-top: 0.3%;
+    padding-top: 23%;
     text-align: center;
     font-style: italic;
     font-size: 15px;
-    color: var(--main-text-color)
+    color: var(--main-text-color);
 }
 
 #footer-text {
@@ -117,95 +145,74 @@ footer {
     margin-bottom: 0px;
 }
 
-
-/* -- Slides -- */
-
-.container {
-    position: relative;
+.highlight {
+    color: var(--highlight-color);
+    font-weight: bold;
 }
 
-.mySlides {
-    display: none;
+/* -- Chat -- */
+
+.message-area {
+    height: 80%;
+    padding: 3px;
+    overflow: auto;
 }
 
-.mySlides, 
-img {
-    height: 420px;
-    width: 450px;
-    margin: auto;
-    border-radius: 20px;
+.typing-area {
+    margin-top: 4px;
+    padding: 4px;
+    height: 8%;
+    text-align: center;
 }
 
-.cursor {
-    cursor: pointer;
-}
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 35%;
-    padding: 20px;
+.typing-box {
+    width: 25%;
+    height: 100%;
+    resize: none;
+    padding: 3px;
+    border-radius: 15px;
     padding-top: 10px;
-    margin-top: -50px;
+}
+
+.send-button {
+    border-radius: 15px;
+    width: 3%;
+    background: var(--highlight-color);
     color: white;
     font-weight: bold;
-    font-size: 30px;
-    border-radius: 0 10px 10px 0;
-    user-select: none;
-    -webkit-user-select: none;
+    padding: 8px;
+    font-size: 13px;
+    margin: auto;
 }
 
-.next {
-    right: 0;
-    border-radius: 10px 0 0 10px;
+.message-box {
+    margin-top: 10px;
 }
 
-.prev:hover,
-.next:hover {
-    background-color: var(--highlight-color);
+.others-message-box {
+
 }
 
-.caption-container {
-    text-align: center;
-    background-color: var(--top-menu-color);
-    border: .5px solid var(--main-color);
-    border-radius: 10px;
-    padding: 2px 16px;
+/* ALTERAR CORES DO FUNDO, NAO TA LEGAL */
+.message {
+    max-width: 30%;
+    border-radius: 5%;
+    padding: 5px;
+    box-shadow: 0 0.25rem 0.25rem var(--main-color), 0 0 1rem var(--highlight-color);
     color: white;
-    margin-top: 5px;
-    font-weight: bold;
+    margin: auto;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
+.my-message {
+    text-align: right;
+    background: var(--top-menu-color);
 }
 
-.column {
-    float: left;
+.others-message {
+    text-align: left;
 }
 
-.column img {
-    width: 150px;
-    height: 150px; 
-    margin-left: 200px;
-    padding-top: 5px;
-    border-radius: 20px;
-}
-
-.demo {
-    opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-    opacity: 1;
-}
-
-h2 {
-    text-align: center;
-    color: #eee;
-    font-size: 30px;
+.separator {
+    width: 100%;
+    height: 8px;
 }

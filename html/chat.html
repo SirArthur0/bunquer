@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Bunquer - Chat</title>
+    <link rel='stylesheet' href='../css/chat.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Roboto:ital,wght@0,300;0,700;0,900;1,100;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="../js/chat.js"></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../imgs/logo.PNG" alt="logo">
+            </a>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li class="home">
+                    <a href="home.html" class="home">Home</a>
+                </li>
+                <li>
+                    <a href="juridico.html" class="juridico">Jurídico</a>
+                </li>
+                <li>
+                    <a href="patrocinio.html" class="patrocinio">Patrocínio</a>
+                </li>
+            </ul>
+        </nav>
+
+        <aside class="autenticacao">
+            <a href="login.html" class="botao">Login</a>
+        </aside>
+    </header>
+
+    <div class="message-area" id="message-area">
+
+    </div>
+
+    <div class="typing-area">
+        <textarea class="typing-box" id="typing-box"></textarea>
+        <button class="send-button" onclick="sendMessage()"> Enviar </button>
+    </div>
+
+    <footer>
+        <p id="footer-text">GLAM CLUBE © 2023</p>
+        <address>Barra do Choça, BA, Masmorra do GLAM Nº 500</address>
+    </footer>
+
+</body>
+
+</html>
